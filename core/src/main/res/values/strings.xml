@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">EzCare</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+    <string name="contentDescription">Add Image</string>
+    <string name="userName">User name:</string>
+    <string name="userLastName">Last name: </string>
+    <string name="tel">Tel:</string>
+    <string name="address">Address:</string>
+    <string name="emergencyCalls">Emergency calls number:</string>
+    <string name="userImage">User Image</string>
+
+    <string name="Jan">January</string>
+    <string name="Feb">February</string>
+    <string name="Mar">March</string>
+    <string name="Apr">April</string>
+    <string name="May">May</string>
+    <string name="Jun">Jun</string>
+    <string name="Jul">July</string>
+    <string name="Aug">August</string>
+    <string name="Sep">September</string>
+    <string name="Oct">October</string>
+    <string name="Nov">November</string>
+    <string name="Dec">December</string>
+
+    <string-array name="months">
+        <item>@string/Jan</item>
+        <item>@string/Feb</item>
+        <item>@string/Mar</item>
+        <item>@string/Apr</item>
+        <item>@string/May</item>
+        <item>@string/Jun</item>
+        <item>@string/Jul</item>
+        <item>@string/Aug</item>
+        <item>@string/Sep</item>
+        <item>@string/Oct</item>
+        <item>@string/Nov</item>
+        <item>@string/Dec</item>
+    </string-array>
+    <string name="everyMinute">Minutes</string>
+    <string name="everyHour">Hours</string>
+    <string name="everyDay">Days</string>
+    <string name="everyMonth">Months</string>
+    <string name="everyYear">Years</string>
+
+    <string-array name="units">
+        <item>@string/everyMinute</item>
+        <item>@string/everyHour</item>
+        <item>@string/everyDay</item>
+        <item>@string/everyMonth</item>
+        <item>@string/everyYear</item>
+    </string-array>
+
+    <string name="helpGiver"> I am helping someone on their medications</string>
+    <string name="helpTaker">I need other\'s help on my medications</string>
+    <string name="selfHelper">I am taking care of my medications</string>
+    <string name="usersList">Users</string>
+    <string name="userAge">Age:</string>
+    <string name="done_fabTitle">Done</string>
+    <string name="show_medication_ImageView">Show Medication</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="addUserSuccessMessage">New user added successfully</string>
+    <string name="editUserSuccessMessage">User updated successfully</string>
+    <string name="user_exists">User with this name is already exists</string>
+    <string name="userDeleted">User successfully deleted</string>
+    <string name="editUser">Edit user</string>
+    <string name="addNewUser">Add new user</string>
+    <string name="medicationFragment">Medications for</string>
+    <string name="fab_add_new_user">Add New User</string>
+    <string name="medicineName">Medicine name</string>
+    <string name="medicationStartDate">Medication start Date</string>
+    <string name="done">Done</string>
+    <string name="labelTxtAddEditMed">I have to take my medication every :</string>
+    <string name="add_new_medication">Add new medication</string>
+    <string name="edit_medication">Edit Medication data</string>
+    <string name="save_medicine_data">Save medicine data</string>
+    <string name="new_medicine_saved_successfully">New medicine added successfully </string>
+    <string name="medication_updated_successfully">Medication updated successfully</string>
+    <string name="slash" translatable="false">/</string>
+    <string name="separator" translatable="false">:</string>
+    <string name="treatment_for">Treatment for :</string>
+    <string name="medicine_name">Medicine name:</string>
+    <string name="medicine_picture">medicine picture</string>
+    <string name="application_label">application Label</string>
+    <string name="next_schedule_at">Next schedule at:</string>
+    <string name="next_schedule">Next schedule</string>
+    <string name="medication_name">Medicine name</string>
+    <string name="need_permission">You need to accept required permission to use this app</string>
+    <string name="dosage">dosage</string>
+    <string name="next">next</string>
+    <string name="finish">close</string>
+    <string name="done_creating_medication">Done</string>
+    <string name="approximate_usage_period">approximate duration of treatment(days)</string>
+    <string name="medication_image">medication_image</string>
+    <string name="use_gallery">Use gallery</string>
+    <string name="use_camera">Use camera</string>
+    <string name="set_as_default">Set as default</string>
+    <string name="delete_medication_image">Delete</string>
+    <string name="short_description_about_this_medication">short description</string>
+    <string name="date_taken">Date taken:</string>
+    <string name="doctor_name">Doctor name:</string>
+    <string name="select_image">select_image</string>
+    <string name="sound_mute">sound_mute</string>
+    <string name="stop_service_and_exit">Stop service and Exit</string>
+    <string name="user_name_filed_is_empty">User name/last name is empty</string>
+    <string name="medicine_images">Medicine images</string>
+    <string name="progress_images">Images of treatment progress</string>
+    <string name="duration_less_than_2">Approximate duration of treatment must be greater that 1</string>
+    <string name="delete_title">will be deleted</string>
+    <string name="yes">delete</string>
+    <string name="no">cancel</string>
+    <string name="alarm">Medications to take</string>
+
+    <string name="deep_link_uri" translatable="false">myProject://com.hossain_ehs.EzCareMM/medication/medication_presentation/{userId}</string>
+    <string name="deep_link_to_alarm" translatable="false">myProject://com.hossain_ehs.EzCareMM/medication/medication_presentation</string>
+    <string name="deep_link_to_alarm2" translatable="false">myproject://com.hossain_ehs/alarm2</string>
+
+
+    <!--   add edit medications errors-->
+    <string name="noMedicineNameError">Medicine name field is empty</string>
+    <string name="noPeriodSet">time period is not set</string>
+    <string name="error_behind_current_time">Selected time should be greater than current system time</string>
+    <string name="duplicate_medicine">has had this medication</string>
+    <string name="duration_is_not_set">Medication duration was not set</string>
+    <string name="dosage_is_not_set">Dosage was not set</string>
+    <string name="doctor_name_was_not_set">Doctor`s name was not set</string>
+
+</resources>

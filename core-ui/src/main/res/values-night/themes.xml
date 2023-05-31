@@ -1,0 +1,20 @@
+<resources >
+    <style name="EditText.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="hintEnabled">true</item>
+        <item name="boxStrokeColor">@color/niceBlue</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textColorHint">@color/niceBlue</item>
+        <item name="hintTextColor">@color/niceBlue </item>
+    </style>
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/niceBlue</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

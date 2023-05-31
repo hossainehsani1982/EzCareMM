@@ -1,0 +1,29 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        jcenter()
+    }
+}
+rootProject.name = "EzCareMM"
+include ':app'
+include ':core'
+include ':core-ui'
+include ':user'
+include ':user:user_data'
+include ':user:user_domain'
+include ':user:user_presentation'
+include ':medication'
+include ':medication:medication_data'
+include ':medication:medication_domain'
+include ':medication:medication_presentation'

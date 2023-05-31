@@ -1,0 +1,118 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
+
+
+
+
+android {
+    namespace = "com.hossain_ehs.ezcaremm"
+    compileSdk ProjectConfig.compileSdk
+
+    defaultConfig {
+        minSdk ProjectConfig.minSdk
+        targetSdk ProjectConfig.targetSdk
+        versionCode ProjectConfig.versionCode
+        versionName ProjectConfig.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion Compose.composeCompilerVersion
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion  Compose.composeCompilerVersion
+    }
+    buildFeatures {
+        compose  true
+        viewBinding  true
+
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation Compose.compiler
+    implementation Compose.ui
+    implementation Compose.uiToolingPreview
+    implementation Compose.material
+    implementation Compose.runtime
+    implementation Compose.activityCompose
+    implementation Compose.hiltNavigationCompose
+
+    //fragment
+    implementation AndroidX.fragment
+    //lifecycle
+    implementation AndroidX.lifecycleProcess
+    implementation AndroidX.lifecycleViewModelStat
+    implementation AndroidX.lifecycleService
+    implementation AndroidX.lifecycleViewModel
+    implementation AndroidX.lifecycleLiveData
+
+    //swipe to delete
+    implementation SwipeToDelete.swipeToDelete
+
+    //Shawnlin number picker
+    implementation NumberPicker.shawnlinNumberPicker
+
+    //slide to act
+    implementation SlideToAct.slideToAct
+
+    //lottie
+    implementation Lottie.lottie
+
+    //glide
+    implementation Glide.glide
+    annotationProcessor Glide.glideCompiler
+
+
+    implementation Google.material
+    implementation AndroidX.constraintlayout
+
+    implementation AndroidX.navigationFragment
+    implementation AndroidX.navigationUi
+
+    kapt DaggerHilt.hiltCompiler
+    implementation DaggerHilt.hiltAndroid
+    implementation DaggerHilt.hiltNavigationFragment
+    annotationProcessor DaggerHilt.hiltCompiler
+
+    testImplementation Testing.junit4 
+    testImplementation Testing.junitAndroidExt 
+    testImplementation Testing.truth 
+    testImplementation Testing.coroutines 
+    testImplementation Testing.turbine 
+    testImplementation Testing.composeUiTest
+    testImplementation Testing.mockk
+    testImplementation Testing.mockWebServer 
+
+    androidTestImplementation Testing.junit4 
+    androidTestImplementation Testing.junitAndroidExt 
+    androidTestImplementation Testing.truth 
+    androidTestImplementation Testing.coroutines 
+    androidTestImplementation Testing.turbine 
+    androidTestImplementation Testing.composeUiTest
+    androidTestImplementation Testing.mockk
+    androidTestImplementation Testing.mockWebServer 
+    androidTestImplementation Testing.hiltTesting 
+}

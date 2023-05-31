@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/medicationSwipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="8dp"
+    app:dragEdge="right"
+    android:layoutDirection="ltr"
+    app:mode="same_level">
+
+    <!--Swipe Layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="20dp"
+       >
+        <TextView
+            android:id="@+id/txtDeleteMedication"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/delete"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/deleteRed"
+            />
+        <TextView
+            android:id="@+id/txtEditMedication"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/edit"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/editYellow"
+            />
+    </LinearLayout>
+
+    <!--Main Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        >
+        <ImageView
+            android:id="@+id/imgExistingMedication"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/outline_medication_24"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="start|center"
+            android:layout_weight="1"
+            android:contentDescription="@string/userImage" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInput_medication_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/medication_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="16dp"
+                >
+                <EditText
+                    android:id="@+id/txtExistingMedicationName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:focusable="false"
+                    android:autofillHints="medicine name"
+                    android:gravity="start|center"
+                    android:textColor="@color/mtDarkBlue"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInput_next_usage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/next_schedule"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="2dp">
+                <EditText
+                    android:id="@+id/txtNextUsage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:focusable="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="start|center"
+                    android:textColor="@color/mtDarkBlue"
+                    android:autofillHints="next schedule"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:inputType="datetime"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInput_short_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/short_description_about_this_medication"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="2dp">
+                <EditText
+                    android:id="@+id/text_short_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:focusable="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="start|center"
+                    android:textColor="@color/mtDarkBlue"
+                    android:background="@android:color/transparent"
+                    android:autofillHints="short description"
+                    android:layout_gravity="center"
+                    android:inputType="datetime"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_doctor_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/doctor_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="2dp">
+                <EditText
+                    android:id="@+id/edit_text_doctor_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:focusable="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="start|center"
+                    android:autofillHints="doctor name"
+                    android:textColor="@color/mtDarkBlue"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:inputType="datetime"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lblShowProgress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/progress_images"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="15sp"
+                android:textColor="@color/niceBlue"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="8dp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+
+
+
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

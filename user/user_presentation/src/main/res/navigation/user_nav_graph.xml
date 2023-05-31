@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav_graph"
+    app:startDestination="@id/usersFragment">
+
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.hossain_ehs.user_presentation.users_ui.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_usersFragment_to_addEditUserFragment"
+            app:destination="@id/addEditUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditUserFragment"
+        android:name="com.hossain_ehs.user_presentation.add_edit_user_ui.AddEditUserFragment"
+        android:label="fragment_add_edit_user"
+        tools:layout="@layout/fragment_add_edit_user" >
+        <argument
+            android:name="userId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

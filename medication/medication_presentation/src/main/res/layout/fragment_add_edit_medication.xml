@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".add_edit_medication_ui.AddEditMedicationFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="100dp"
+        android:animateLayoutChanges="true"
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        android:isScrollContainer="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgMedicineImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/contentDescription"
+                android:layout_gravity="top"
+                android:visibility="gone"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="24dp"
+                android:src="@drawable/outline_add_a_photo_24"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInput_patient_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/userName"
+                style="@style/EditText.OutlinedBox"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtPatientName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="textPersonName"
+                    android:autofillHints="name"
+                    android:fontFamily="@font/roboto_regular"
+                    android:labelFor="@id/txtPatientName"
+                    android:textColor="@color/mtDarkBlue" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_medicine_name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:boxStrokeColor="@color/niceBlue"
+                app:hintTextColor="@color/niceBlue"
+                android:background="@android:color/transparent"
+                android:hint="@string/medicineName"
+                style="@style/EditText.OutlinedBox"
+                app:endIconMode="clear_text"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                >
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/editText_medicineName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent"
+                    android:autofillHints="enter your name"
+                    android:completionHint="@string/medication_name"
+                    android:completionThreshold="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="start|center"
+                    android:inputType="textCapWords|textAutoCorrect"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/mtDarkBlue"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/niceBlue"
+                app:hintTextColor="@color/niceBlue"
+                android:background="@android:color/transparent"
+                android:hint="@string/short_description_about_this_medication"
+                style="@style/EditText.OutlinedBox"
+                app:endIconMode="clear_text"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_short_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:textCursorDrawable = "@drawable/color_cursor"
+                    android:textColor="@color/mtDarkBlue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:autofillHints="short description"
+                    android:inputType="textCapWords|textAutoCorrect"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_doctor_name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:boxStrokeColor="@color/niceBlue"
+                app:hintTextColor="@color/niceBlue"
+                android:background="@android:color/transparent"
+                android:hint="@string/doctor_name"
+                style="@style/EditText.OutlinedBox"
+                app:endIconMode="clear_text"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                >
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/edit_text_doctor_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent"
+                    android:autofillHints="enter your name"
+                    android:completionHint="@string/medication_name"
+                    android:completionThreshold="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="start|center"
+                    android:inputType="textCapWords|textAutoCorrect"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/mtDarkBlue"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgNewMedicineImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/outline_add_a_photo_24"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/niceBlue"
+                app:hintTextColor="@color/niceBlue"
+                android:background="@android:color/transparent"
+                android:hint="@string/dosage"
+                style="@style/EditText.OutlinedBox"
+                app:endIconMode="clear_text"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_dosage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:textCursorDrawable = "@drawable/color_cursor"
+                    android:textColor="@color/mtDarkBlue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:autofillHints="enter your name"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/niceBlue"
+                app:hintTextColor="@color/niceBlue"
+                android:background="@android:color/transparent"
+                android:hint="@string/approximate_usage_period"
+                style="@style/EditText.OutlinedBox"
+                app:endIconMode="clear_text"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_usage_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:textCursorDrawable = "@drawable/color_cursor"
+                    android:textColor="@color/mtDarkBlue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:autofillHints="enter your name"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayout_selected_starting_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/niceBlue"
+                app:hintTextColor="@color/niceBlue"
+                android:background="@android:color/transparent"
+                android:hint="@string/medicationStartDate"
+                style="@style/EditText.OutlinedBox"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/edit_white"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_startingDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:textColor="@color/mtDarkBlue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="15sp"
+                    android:autofillHints="medication starting date"
+                    android:focusable="false"
+                    android:inputType="date"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayout_nextScheduleDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/niceBlue"
+                app:hintTextColor="@color/niceBlue"
+                android:background="@android:color/transparent"
+                android:hint="@string/next_schedule_at"
+                style="@style/EditText.OutlinedBox"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_nextScheduleDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:textColor="@color/mtDarkBlue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="15sp"
+                    android:autofillHints="medication starting date"
+                    android:focusable="false"
+                    android:inputType="date"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linear_select_start_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layoutDirection="ltr"
+                >
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.shawnlin.numberpicker.NumberPicker
+                        android:id="@+id/picker_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:np_width="64dp"
+                        app:np_height="180dp"
+                        app:np_dividerColor="@color/niceBlue"
+                        app:np_max="59"
+                        app:np_min="0"
+                        app:np_selectedTextColor="@color/numberPickerSelectedColor"
+                        app:np_selectedTextSize="18sp"
+                        app:np_textSize="15sp"
+                        app:np_textColor="@color/numberPickerNotSelectedColor"
+                        app:np_value="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:textSize="20sp"
+                        android:text="@string/slash"/>
+                    <com.shawnlin.numberpicker.NumberPicker
+                        android:id="@+id/picker_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:np_width="64dp"
+                        app:np_height="180dp"
+                        app:np_dividerColor="@color/niceBlue"
+                        app:np_max="59"
+                        app:np_min="0"
+                        app:np_selectedTextColor="@color/numberPickerSelectedColor"
+                        app:np_selectedTextSize="18sp"
+                        app:np_textSize="15sp"
+                        app:np_textColor="@color/numberPickerNotSelectedColor"
+                        app:np_value="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:textSize="20sp"
+                        android:text="@string/slash"/>
+                    <com.shawnlin.numberpicker.NumberPicker
+                        android:id="@+id/picker_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:np_width="64dp"
+                        app:np_height="180dp"
+                        app:np_dividerColor="@color/niceBlue"
+                        app:np_max="59"
+                        app:np_min="0"
+                        app:np_selectedTextColor="@color/numberPickerSelectedColor"
+                        app:np_selectedTextSize="18sp"
+                        app:np_textSize="15sp"
+                        app:np_textColor="@color/numberPickerNotSelectedColor"
+                        app:np_value="3" />
+
+                    <com.shawnlin.numberpicker.NumberPicker
+                        android:id="@+id/picker_Hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="10dp"
+                        app:np_width="64dp"
+                        app:np_height="180dp"
+                        app:np_dividerColor="@color/niceBlue"
+                        app:np_max="59"
+                        app:np_min="0"
+                        app:np_selectedTextColor="@color/numberPickerSelectedColor"
+                        app:np_selectedTextSize="18sp"
+                        app:np_textSize="15sp"
+                        app:np_textColor="@color/numberPickerNotSelectedColor"
+                        app:np_value="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:textSize="20sp"
+                        android:text="@string/separator"/>
+                    <com.shawnlin.numberpicker.NumberPicker
+                        android:id="@+id/picker_minutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="10dp"
+                        app:np_width="64dp"
+                        app:np_height="180dp"
+                        app:np_dividerColor="@color/niceBlue"
+                        app:np_max="59"
+                        app:np_min="0"
+                        app:np_selectedTextColor="@color/numberPickerSelectedColor"
+                        app:np_selectedTextSize="18sp"
+                        app:np_textSize="15sp"
+                        app:np_textColor="@color/numberPickerNotSelectedColor"
+                        app:np_value="3" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/grey_radial_background"
+                    android:text="@string/done"
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/niceBlue"
+                    app:strokeWidth="2dp"
+                    app:backgroundTint="@android:color/transparent"
+                    android:fontFamily="@font/roboto_regular"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <TextView
+                android:id="@+id/lblSelectInterval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/labelTxtAddEditMed"
+                android:fontFamily="@font/roboto_black"
+                android:textColor="@color/mtDarkBlue"
+                android:layout_gravity="start"
+                android:layout_margin="16dp"
+                />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linear_select_interval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layoutDirection="ltr"
+                android:layout_marginBottom="24dp"
+                >
+                <com.shawnlin.numberpicker.NumberPicker
+                    android:id="@+id/picker_interval_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:np_width="64dp"
+                    app:np_height="180dp"
+                    app:np_dividerColor="@color/niceBlue"
+                    app:np_max="59"
+                    app:np_min="0"
+                    app:np_selectedTextColor="@color/numberPickerSelectedColor"
+                    app:np_selectedTextSize="18sp"
+                    app:np_textSize="15sp"
+                    app:np_textColor="@color/numberPickerNotSelectedColor"
+                    app:np_value="3" />
+
+                <com.shawnlin.numberpicker.NumberPicker
+                    android:id="@+id/picker_interval_َunit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:np_width="64dp"
+                    app:np_height="180dp"
+                    app:np_dividerColor="@color/niceBlue"
+                    app:np_max="59"
+                    app:np_min="0"
+                    app:np_selectedTextColor="@color/numberPickerSelectedColor"
+                    app:np_selectedTextSize="18sp"
+                    app:np_textSize="15sp"
+                    app:np_textColor="@color/numberPickerNotSelectedColor"
+                    app:np_value="3" />
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_save_medication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check_mark"
+                android:layout_gravity="bottom|center"
+                android:visibility="gone"
+                android:layout_margin="24dp"
+                app:backgroundTint="@color/niceBlue"
+                app:tint="@color/white"
+                android:contentDescription="@string/save_medicine_data"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

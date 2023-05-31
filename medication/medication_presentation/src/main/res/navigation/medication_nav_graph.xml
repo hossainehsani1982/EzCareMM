@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/medication_nav_graph"
+    app:startDestination="@id/medicationFragment">
+
+    <fragment
+        android:id="@+id/medicationFragment"
+        android:name="com.hossain_ehs.medication_presentation.medication_ui.MedicationFragment"
+        android:label="fragment_medication"
+        tools:layout="@layout/fragment_medication" >
+        <deepLink app:uri="@string/deep_link_uri" />
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_medicationFragment_to_addEditMedicationFragment"
+            app:destination="@id/addEditMedicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditMedicationFragment"
+        android:name="com.hossain_ehs.medication_presentation.add_edit_medication_ui.AddEditMedicationFragment"
+        android:label="fragment_add_edit_medication"
+        tools:layout="@layout/fragment_add_edit_medication" >
+        <argument
+            android:name="medId"
+            app:argType="integer" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument android:name="userId"
+            app:argType="integer" />
+        <argument android:name="userImageUri"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicationAlarmFragment"
+        android:name="com.hossain_ehs.medication_on_alarm_ui.MedicationAlarmFragment"
+        android:label="fragment_medication_alarm"
+        tools:layout="@layout/fragment_medication_alarm" >
+        <deepLink app:uri="@string/deep_link_to_alarm" />
+    </fragment>
+
+</navigation>
